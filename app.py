@@ -25,9 +25,10 @@ def predict():
         data = request.get_json()
         # Change these fields to match the actual inputs your model expects
         input_data = np.array([[
-            data['temperature'],
-            data['humidity'],
-            data['wind_speed']
+            data['MaxTemp'],
+            data['Humidity'],
+            data['Pressure'],
+            data['Temp'],
         ]])
 
         prediction = model.predict(input_data)
